@@ -1,0 +1,311 @@
+@charset "utf-8";
+@import url("Font.css");
+@import url("FontAwesome.css");
+
+*{box-sizing: border-box;
+}
+
+body{margin: 0;
+	padding: 0;}
+
+a{text-decoration: none;
+
+}
+
+hr{width: 455px;
+	opacity: 0.6;
+}
+
+div{border: solid black 0px;}
+/*Container*/
+.container{width:1349px; 
+margin: auto;
+}
+
+
+/*Header Start*/
+.nav{height:65px;
+	max-width: 100%;
+	border: solid black 0px;
+	position: relative;
+	top:0;
+}
+
+
+
+.navlogo{height:205px;
+	max-width: 380px;
+	border: solid black 0px;
+	margin-left: 45px;
+	float: left;
+	
+}
+
+.logo{position: absolute;
+top:9px;
+	left:120px;
+z-index: 2;
+}
+
+.logobg{position: absolute;
+top:-100px;
+	left:70px;
+z-index: 1;
+}
+
+.div1{
+	width: 100%;
+	height: 10px;
+  border: solid black 0px;
+	background-color: #215F9C;
+	z-index: 1;
+}
+.logobg1{
+	position:absolute;
+	top:65px;
+	left:-5px;
+}
+
+.navli{display: inline-block;
+	font-size: 0.8em;
+	margin-top: 8px;
+	margin-left: 30px;
+	padding-right: 10px;
+	position: relative;
+
+	}
+
+.navigation{float: left;
+margin-left: 310px;
+	padding-top: 0px;
+}
+.navli:hover{border-bottom: 3px  #D09920 solid;
+	padding-bottom: 24px;
+}
+
+.link{	color: #215F9C;
+	font-family:'OpenSans-Regular';
+}
+
+.link:hover{color: #D09920;
+}
+
+/*Header End*/
+
+
+/*Our Services(start)*/
+.ourservicediv{
+	height: 160px;
+	max-width: 100%;
+	border: solid black 0px;
+text-align: right;
+	color: white;
+	background-image: url("Images/parallax_bg.jpg");
+		padding-top: 25px;
+}
+
+.servicetext{
+	font-size: 4.1em;
+	margin-right: 50px;
+		
+	
+}
+
+.servicesubtext{
+		margin-right: 50px;
+	font-weight: 700;
+	position: relative;
+	top:-10px;
+}
+/*Our Services(End)*/
+
+/*Services Div Start*/
+#servicediv{
+	height: 970px;
+	max-width: 100%;
+	border: solid black 0px;
+	background-image: url("Images/New folder/floral_bg.png");
+	background-repeat: no-repeat;
+}
+
+.topleft{float: left;
+}
+.topleft{float: right;}
+
+
+
+
+
+/*Services(start)*/
+.servicediv{
+	height: 405px;
+	max-width: 1015px;
+	margin: auto;
+	padding: 20px 5px;
+	position: relative;
+}
+
+.services{
+	height: 182px;
+	width: 182px;
+	float: left;
+	margin-right: 18px;
+	background: #1D4491;
+	    border: 1px dashed #d9b76e;
+	background-image: url("Images/New folder/goldenborder.png");
+	background-size: 154% auto;
+	background-position: center center;
+	text-align: center;
+opacity: 1;
+	transition: all 1s;
+	
+}
+
+.services:hover{opacity: 1;}
+
+
+.services h5 {font-family: "Caviar Dreams";
+font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+	margin-top: 15px;
+	font-weight: 700;
+	color:  #d9b76e;
+}
+
+.services hr{width: 150px;
+border: dashed  #d9b76e 1px;
+}
+
+.services ul {
+	margin: 0;
+	padding: 0;
+	list-style-image:url( Icons/circle-8.png);
+	list-style-position: inside;
+	font-family: "Caviar Dreams";
+	color: white;
+}
+
+.services:nth-child(2){font-size: 0.8em;}
+.services:nth-child(3){font-size: 0.9em;}
+.services:nth-child(6){margin-top: 20px;}
+.services:nth-child(7){margin-top: 20px;}
+.services:nth-child(8){margin-top: 20px;}
+.services:nth-child(9){margin-top: 20px;}
+.services:nth-child(10){margin-top: 20px;}
+
+
+.services2{
+	height: 182px;
+	width: 182px;
+	margin-right: 18px;
+	background: #FFFFFF;
+	    border: 1px dashed #d9b76e;
+	background-image: url("Images/New folder/goldenborder.png");
+	background-size: 154% auto;
+	background-position: center center;
+	text-align: center;
+	transition: all 0.5s;
+	transition-timing-function:ease;
+
+}
+
+
+.p1{position: absolute;
+top: 10;
+	left: 23;}
+
+
+.p2{position: absolute;
+	top:20;
+	left: 206px;}
+
+.p3{position: absolute;
+	top:20;
+	left: 406px;
+font-size: 0.8em;
+}
+
+.p4{position: absolute;
+	top:20px;
+	left: 606px;}
+
+.p5{position: absolute;
+	top:20;
+	left: 806px;}
+
+.p6{position: absolute;
+	top:222px;
+	left: 6px;}
+
+.p7{position: absolute;
+	top:222px;
+	left: 206px;}
+
+.p8{position: absolute;
+	top:222px;
+	left: 406px;}
+
+.p9{position: absolute;
+	top:222px;
+	left: 606px;}
+.p10{position: absolute;
+	top:222px;
+	left: 806px;}
+
+
+.services2 img{
+	margin-top: 35px;
+	margin-left: auto;
+}
+
+.services2 h5 {font-family: "Caviar Dreams";
+font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+	margin-top: 15px;
+	font-weight: 700;
+	color: #1D4491;
+}
+
+.services2:hover{opacity: 0;}
+
+#f1{float: left;
+position: relative;
+	top:10px;
+	z-index: -99999;
+}
+#f2{float: right;
+}
+
+
+/*Services(End)*/
+
+/*Services Div End*/
+
+/*bottom triangle start*/
+.namediv{height:60px;
+max-width: 100%;
+	background:#0D3E85;
+	color: white;
+clear: both;
+}
+
+#name{padding-top: 20px;
+padding-left: 50px;
+	float: left;
+}
+
+#name1{padding-top: 20px;
+padding-right: 50px;
+	float: right;
+}
+
+.bottomimg{padding: 0;
+margin: auto;
+	position: relative;
+	top:200px;
+	left: 90px;
+	z-index: -9999;
+}
+/*bottom triangle End*/

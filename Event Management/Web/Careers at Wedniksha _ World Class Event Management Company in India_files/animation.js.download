@@ -1,0 +1,230 @@
+function el_animate() {
+    var delay, speed, prog;
+    jQuery('.animated').each(function() {
+        var el = jQuery(this);
+        //console.log( elements[i] , i );
+        if (el.visible(true)) {
+			// Checking if to animate for Dial Skills
+			
+			if(el.hasClass('countPercentage')){
+				//var element = jQuery('.countPercentage');
+				//console.log(el.children('span'));
+				var percentageto = el.data('percentageto');
+				var animdelay = el.data('animdelay');
+				
+				animate_percentage(el.children('span'), percentageto, animdelay);
+			
+			}
+			
+            delay = el.data('animdelay');
+            if (!delay) {
+                delay = 0;
+            }
+			
+            el.css('-webkit-animation-delay', delay);
+            el.css('-moz-animation-delay', delay);
+            el.css('-o-animation-delay', delay);
+            el.css('animation-delay', delay);
+
+            speed = el.data('animspeed');
+
+            if (!speed) {
+                speed = 0.5;
+            }
+
+            el.css('-webkit-animation-duration', speed);
+            el.css('-moz-animation-duration', speed);
+            el.css('-o-animation-duration', speed);
+            el.css('animation-duration', speed);
+
+         /*el.delay(1000)
+.queue( function(){
+
+					if (el.data('animtype')) {
+						el.addClass(el.data('animtype'));
+					}
+					el.addClass('animated_visible');
+				});*/
+			
+			if (el.data('animtype')) {
+				el.addClass(el.data('animtype'));
+			}
+			el.addClass('animated_visible');
+					
+            // que.push(this);
+        }
+        else if (el.data('animrepeat') == '1') {
+            el.removeClass(el.data('animtype'));
+            el.removeClass('animated_visible');
+        }
+		
+    });
+}
+
+//jQuery(window).ready(el_animate);
+//jQuery(window).load(el_animate);
+
+
+jQuery(window).scroll(function(event) {
+    el_animate();
+});
+
+	// Animating Percentage
+/*	var element = jQuery('.countPercentage');
+	var el = element.children('span');
+	var percentageto = jQuery('.countPercentage').data('percentageto');
+	
+	animate_percentage(el, percentageto, 15);*/
+	
+	function animate_percentage( display , percent_to, speed){
+		
+	
+		var currentValue = parseInt(display.text());
+		var nextValue    = percent_to;
+		
+		var diff         = nextValue - currentValue;
+		var step         = ( 0 < diff ? 1 : -1 ); 
+	
+		for (var i = 0; i < Math.abs(diff); ++i) {
+			setTimeout(function() {
+				currentValue += step;
+				display.text(currentValue);
+			}, speed * i);
+		}
+	}	
+	
+	
+	/*
+ * Viewport - jQuery selectors for finding elements in viewport
+ *
+ * Copyright (c) 2008-2009 Mika Tuupola
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project home:
+ *  http://www.appelsiini.net/projects/viewport
+ *
+ */
+(function($) {
+
+
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *     the user visible viewport of a web browser.
+     *     only accounts for vertical position, not horizontal.
+     */
+
+    $.fn.visible = function(partial) {
+
+        var $t = $(this),
+                $w = $(window),
+                viewTop = $w.scrollTop(),
+                viewBottom = viewTop + $w.height(),
+                _top = $t.offset().top,
+                _bottom = _top + $t.height(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+
+        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+    };
+})(jQuery);
+
+jQuery(document).ready(function() {
+			 
+	$(".wedding_slides img").hide().animate({"opacity":"0"});
+	$(".wedding_slides img:nth-child(1) .main_banner img:nth-child(1)").animate({"opacity":"1"}).show();
+ 
+ 
+    $(".mobile_nav_btn").click(function() { 
+	$("#top-nav.top-nav").slideToggle();
+});
+ 
+ 
+ $(".bhavnesh").hover(function() {$(".post_content.text-left  .post_title a").toggleClass("red_text");});
+ $(".farid_khan").hover(function() {$(".post_content.text-right .post_title a").toggleClass("red_text");});
+ 
+  
+ 
+  $(".wedding_slides img:nth-child(1)").animate({"opacity":"1"}).show();
+ var count = 1;
+setInterval(function() {
+    count = ($(".wedding_slides img:nth-child("+count+")").animate({"opacity":"0"}).next().length == 0) ? 1 : count+1;
+    $(".wedding_slides img:nth-child("+count+")").animate({"opacity":"1"}).show();
+}, 4600);
+
+
+	$(".news_and_media .wedding_slides li").animate({"opacity":"0"}).hide();
+ $(".news_and_media .wedding_slides li:nth-child(1)").animate({"opacity":"1"}).show();
+ var counthome = 1;
+setInterval(function() {
+    counthome = ($(".news_and_media .wedding_slides li:nth-child("+counthome+")").not("img, span").animate({"opacity":"0"}).hide().next().length == 0) ? 1 : counthome+1;
+    $(".news_and_media .wedding_slides li:nth-child("+counthome+")").not("img, span").animate({"opacity":"1"},"slow").show();
+}, 4600);
+
+
+
+$(".projects.decoration input:nth-child(1)").attr("pattern","[A-Za-z].{3,}");
+$(".projects.decoration input:nth-child(2)").attr("pattern","[0-9].{8,}");
+$(".projects.decoration input:nth-child(3)").attr("pattern","[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}");
+$(".projects.decoration input[placeholder='Your name'], input[placeholder='Your Phone'], input[placeholder='Your email']").attr("required","");
+
+//$(".row.projects.decoration form").attr("action","contact.php");
+$(".row.projects.decoration form").attr("method","post");
+$(".main_banner img:nth-child(1)").css({"opacity":"1"});
+var main_banner = 1;
+setInterval(function() {
+    main_banner = ($(".main_banner img:nth-child("+main_banner+")").animate({"opacity":"0"}).next().length == 0) ? 1 : main_banner+1;
+    $(".main_banner img:nth-child("+main_banner+")").animate({"opacity":"1"});
+}, 4600);
+}); 
+
+
+var go = true;
+var get_hight = $(window).height() - 150;
+$(window).scroll(function() {
+ 	 if ($(this).scrollTop() > get_hight && go) {  
+        $(".text_banner_holder1, .small_white").stop().fadeOut("fast");
+        go = false;
+    } else if ($(this).scrollTop() < get_hight && !go) {
+        $(".text_banner_holder1, .small_white").stop().fadeIn("fast");
+        go = true;
+    }	
+ });
+ 
+ 
+ $(".video_list li a").on("click", function() {  
+ 					 var getIad = $(this).attr("data-id");
+						//	$(getIad).get(0).stopVideo();
+							$(".video_plyer:visible").hide();
+							$(getIad).fadeIn("slow");
+ 						});
+						
+						
+						
+jQuery( document ).ready(function() {
+ 
+var url=document.location.hash;
+if(url == '#thankyou'){
+	jQuery(".contactForm").hide("slow");
+	jQuery(".thankyou").delay("slow").show("slow");
+  	 jQuery('html, body').animate({scrollTop: $(".thankyou").offset().top}, "fast");}
+});							
+
+
+$(document).ready(function(e) {
+	if($(window).width() <= 1100) {
+$(".Our_projects .service_single .service_right h4").css({"font-size":"17px"});
+	  $(".Our_projects .service_right").css({"margin-bottom":"0"});
+
+    $(".Our_projects .service_right > p").text(function(index, currentText) {
+    return currentText.substr(0, 140)  + '...';
+});
+}
+});

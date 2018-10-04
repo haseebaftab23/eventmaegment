@@ -1,0 +1,70 @@
+@charset "utf-8";
+@font-face{
+			font-family:'OpenSans-Regular';
+			src: url(  Fonts/open-sans/OpenSans-Regular.ttf );
+}
+.a{
+	font-family:'OpenSans-Regular';
+}
+
+
+@font-face{
+			font-family: 'Lemon/Milk'; 
+			src: url(  Fonts/lemon_milk/LemonMilk.otf);}
+
+@font-face{
+			font-family:'OpenSans-bold';
+			src: url(  Fonts/open-sans/OpenSans-Bold.ttf);}
+
+@font-face{
+			font-family:'OpenSans-Regular';
+			src: url( Fonts/open-sans/OpenSans-Regular.ttf);}
+
+@font-face{
+			font-family: "Caviar Dreams";
+			src: url( Fonts/caviar_dreams/CaviarDreams.ttf );}
+
+@font-face{
+			font-family: 'Moon';
+			src: url( Fonts/MoonTypeface FREE FONT/Moon Light.otf );}
+
+@font-face{
+			font-family: 'Italianno';
+	font-style: normal;
+  font-weight: 400;
+			src: url(  Fonts/Italianno/Italianno-Regular.ttf);
+
+}
+
+@font-face{
+			font-family: 'Sacramento';
+			src: url(  Fonts/sacramento/Sacramento-Regular.ttf);
+	font-weight: 200;
+}
+
+@font-face{
+			font-family: 'Eutemia';
+			src: url(  Fonts/eutemia-i/Eutemia.ttf);}
+
+
+@font-face{
+			font-family: 'AlexBrush';
+			src: url(  Fonts/alex-brush/AlexBrush-Regular.ttf);}
+
+
+h5{
+	font-size: 0.99	em;
+}
+
+p{font-family:  'Moon';
+margin: 0;
+	padding: 0;
+}
+
+h2{			font-family: 'Italianno';
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+}
+
+h5{font-weight: 200;}
